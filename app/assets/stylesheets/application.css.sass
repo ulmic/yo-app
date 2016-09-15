@@ -2,6 +2,8 @@
  *= require_tree .
  *= require font-awesome
  *= require_self
+//= require foundation_and_overrides
+
  */
 
 body
@@ -9,12 +11,15 @@ body
   text-align: center
 
 .menu
-  position: fixed
   text-align: center
   width: 100%
+  z-index: 999
   .nav
     a
       box-sizing: border-box
       color: #eee
       &:hover
         color: #3b3c9e
+
+.container
+  text-align: center
