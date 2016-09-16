@@ -9,14 +9,18 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml-rails'
+gem 'font-awesome-rails'
+gem 'foundation-rails', '~> 6' 
+gem 'simple_form'
+gem 'reform'
+gem 'karamzin'
 
 group :development, :test do
   gem 'byebug'
   gem 'foreman'
   gem 'guard-livereload', '~> 2.4', require: false
-  gem "rack-livereload"
+  gem 'rack-livereload'
   gem 'web-console', '2.0.0.beta2'
-  gem 'spring', '1.3.4'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'colorize', '0.6.0'
