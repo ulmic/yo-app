@@ -13,6 +13,7 @@ gem 'font-awesome-rails'
 gem 'foundation-rails', '~> 6' 
 gem 'simple_form'
 gem 'reform'
+gem 'karamzin'
 
 group :development, :test do
   gem 'byebug'
