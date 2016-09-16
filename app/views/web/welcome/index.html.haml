@@ -1,2 +1,5 @@
-= form_tag do
-  = text_area :text, ''
+%h1
+  Вставьте свой текст
+= simple_form_for @conversion, url: { controller: 'api/internal/conversions', action: :create } do |f|
+  = f.input :body, label: false
+  = f.submit

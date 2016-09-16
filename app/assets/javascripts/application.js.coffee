@@ -8,6 +8,6 @@ $ ->
   $(document).foundation()
   $('textarea').each ->
     $(this).on 'focus', ->
-      $(this).height 500
+      $(this).animate height: 300
     $(this).on 'focusout', ->
-      $(this).height 100
+      $(this).animate height: 100
