@@ -2,4 +2,4 @@
   Вставьте свой текст
 = simple_form_for @conversion, url: { controller: 'web/conversions', action: :create } do |f|
   = f.input :body, label: false
-  = f.button :submit
+  = f.submit t('.insert_yo'), class: :button
