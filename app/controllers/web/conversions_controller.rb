@@ -4,6 +4,7 @@ class Web::ConversionsController < ApplicationController
   def create
     @conversion = ConversionForm.new_with_model
     params[:conversion][:converted_body] = insert params[:conversion][:body]
+    params[:conversion][:size] = params[:conversion][:body].count
     params[:conversion][:body] = nil
     if @conversion.submit params[:conversion]
       redirect_to conversion_path @conversion

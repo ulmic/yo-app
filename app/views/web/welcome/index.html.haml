@@ -1,5 +1,6 @@
 %h1
   Вставьте свой текст
 = simple_form_for @conversion, url: { controller: 'web/conversions', action: :create } do |f|
+  #conversion_body_count
   = f.input :body, label: false
   = f.submit t('.insert_yo'), class: :button

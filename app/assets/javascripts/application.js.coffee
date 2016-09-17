@@ -11,3 +11,6 @@ $ ->
       $(this).animate height: 300
     $(this).on 'focusout', ->
       $(this).animate height: 100
+  $('#conversion_body_count').html $('#conversion_body').val().length
+  $('#conversion_body').on 'input', ->
+    $('#conversion_body_count').html $('#conversion_body').val().length
