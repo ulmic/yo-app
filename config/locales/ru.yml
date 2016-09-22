@@ -1,5 +1,5 @@
 ru:
   web:
-    welcome:
-      index:
+    shared:
+      conversion_form:
         insert_yo: Вставить Ё
