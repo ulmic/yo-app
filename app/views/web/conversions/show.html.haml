@@ -1,11 +1,17 @@
 .row.result
-  %h4
-    Конвертированный текст
-  = @conversion.converted_body
+  .medium-6.columns
+    %h4
+      Конвертированный текст
+    = @conversion.converted_body
+  .medium-6.columns
+    %h4
+      Исходный текст
+    = params[:body]
 .row.actions
-  = link_to conversion_path(@conversion, conversion: { status: :good }), class: 'button success large' do
-    = fa_icon :check
-    Всё правильно!
-  = link_to conversion_path(@conversion, conversion: { status: :good }), class: 'button alert large' do
-    = fa_icon :remove
-    Есть ошибки...
+  .meduim-12.columns
+    = link_to conversion_path(@conversion, conversion: { status: :good }), class: 'button success large' do
+      = fa_icon :check
+      Всё правильно!
+    = link_to conversion_path(@conversion, conversion: { status: :good }), class: 'button alert large' do
+      = fa_icon :remove
+      Есть ошибки...
