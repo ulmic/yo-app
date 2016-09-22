@@ -17,4 +17,13 @@ class Web::ConversionsController < ApplicationController
   def show
     @conversion = Conversion.find params[:id]
   end
+
+  def update
+    @conversion = ConversionForm.find_with_model
+    if @conversion.submit params[:conversion]
+      redirect_to root_path, notice: t('notices.thanks_for_answer')
+    else
+      redirect_to '/500'
+    end
+  end
 end
