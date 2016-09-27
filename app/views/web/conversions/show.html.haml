@@ -2,6 +2,8 @@
   .medium-6.columns
     %h4
       Конвертированный текст
+      = link_to '#', id: 'to_clipboard', 'data-clipboard-text' => @conversion.converted_body do
+        = fa_icon :clipboard
     = @conversion.converted_body
   .medium-6.columns
     %h4
