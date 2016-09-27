@@ -1,3 +1,4 @@
 class Conversion < ActiveRecord::Base
-  enumerize :status, [ :good, :bad, :not_rated ]
+  extend Enumerize
+  enumerize :status, in: [ :good, :bad, :not_rated ]
 end

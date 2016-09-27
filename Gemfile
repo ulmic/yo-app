@@ -14,6 +14,7 @@ gem 'foundation-rails', '~> 6'
 gem 'simple_form'
 gem 'reform'
 gem 'karamzin'
+gem 'enumerize'
 
 group :development, :test do
   gem 'byebug'
