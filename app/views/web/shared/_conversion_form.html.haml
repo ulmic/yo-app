@@ -1,0 +1,4 @@
+= simple_form_for @conversion, url: { controller: 'web/conversions', action: :create } do |f|
+  = f.input :body, label: false
+  %h3#conversion_body_count
+  = f.submit t('.insert_yo'), class: :button

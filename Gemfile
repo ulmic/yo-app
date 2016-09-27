@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -14,6 +13,7 @@ gem 'foundation-rails', '~> 6'
 gem 'simple_form'
 gem 'reform'
 gem 'karamzin'
+gem 'enumerize'
 
 group :development, :test do
   gem 'byebug'
