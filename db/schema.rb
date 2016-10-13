@@ -18,19 +18,11 @@ ActiveRecord::Schema.define(version: 20160916002028) do
 
   create_table "conversions", force: :cascade do |t|
     t.integer  "size"
-    t.text     "status"
+    t.text     "status",         default: "not_rated"
     t.text     "body"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.text     "converted_body"
-  end
-
-  create_table "texts", force: :cascade do |t|
-    t.integer  "size"
-    t.text     "conversion"
-    t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
