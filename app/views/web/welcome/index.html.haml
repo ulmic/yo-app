@@ -10,5 +10,16 @@
   Мы не сохраняем по умолчанию ваши тексты
 
 = content_for :content do
-  %h1
-    fuck
+  .field{ style: 'background-color: #eee6c2; color: #333' }
+    .row
+      .large-6.columns
+        .image
+          = image_tag 'karamzin.jpg'
+      .large-6.columns.end{ style: 'margin-left: -20px' }
+        .text
+          %h1
+            Николай Михайлович Карамзин
+          %h5
+            историк, крупнейший русский литератор эпохи сентиментализма
+          %h5
+            уроженец Симбирской губернии, считается автором буквы Ё
