@@ -17,3 +17,9 @@ $ ->
       $('#conversion_body_count').html "Символов: #{$conversion_body.val().length}"
   $('#to_clipboard').click ->
     window.prompt $(this).data('clipboard-text')
+
+  $('.arrow-down a').click (e) ->
+    e.preventDefault()
+    $('html body').animate {
+      scrollTop: $($(this).data('href')).offset().top
+    }, 1000
