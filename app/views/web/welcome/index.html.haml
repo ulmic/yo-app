@@ -42,4 +42,15 @@
           %h5
             = fa_icon 'exclamation-circle'
             Мы не сохраняем ваши тексты по умолчанию
-        
+      .large-5.columns
+        .text
+          %h4
+            Исходный текст
+          %textarea{ disabled: :disabled }
+            В лесу родилась елочка
+          %h2
+            = fa_icon :magic
+          %h4
+            Конвертированный текст
+          %textarea{ disabled: :disabled }
+            В лесу родилась ёлочка
