@@ -46,11 +46,17 @@
         .text
           %h4
             Исходный текст
-          %textarea{ disabled: :disabled }
-            В лесу родилась елочка
-          %h2
-            = fa_icon :magic
+          .input-group
+            %input.input-group-field{ type: :text, disabled: :disabled, value: 'В лесу родилась елочка' }
+            .input-group-button
+              %a.button.success
+                = fa_icon :magic
+          %h4
+            = fa_icon 'spin circle-o-notch'
           %h4
             Конвертированный текст
-          %textarea{ disabled: :disabled }
-            В лесу родилась ёлочка
+          .input-group
+            %input.input-group-field{ type: :text, disabled: :disabled, value: 'В лесу родилась ёлочка' }
+            .input-group-button
+              %a.button.primary
+                = fa_icon 'thumbs-up'
