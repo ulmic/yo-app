@@ -14,5 +14,6 @@ module YoApp
     config.i18n.available_locales = [:ru]
     config.i18n.default_locale = :ru
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.paths << Rails.root.join('node_modules')
   end
 end

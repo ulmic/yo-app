@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#we_need_save').hide()
+  $('.errors-exists').click ->
+    if $('#we_need_save').css('display') == 'none'
+      $('#we_need_save').slideDown()
+    else
+      $('#we_need_save').slideUp()
+  $('.hide-callout').click ->
+    $('#we_need_save').slideUp()

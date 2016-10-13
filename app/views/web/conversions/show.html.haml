@@ -1,17 +1,34 @@
 .row.result
   .medium-6.columns
-    %h4
-      Конвертированный текст
-    = @conversion.converted_body
+    .row
+      %h4
+        Конвертированный текст
+      %textarea
+        = @conversion.converted_body
+    .row.actions
+      = link_to conversion_path(@conversion, conversion: { status: :good }), method: :patch, class: 'button success large' do
+        = fa_icon :check
+        Всё правильно!
+      = link_to '#', class: 'button alert large errors-exists' do
+        = fa_icon :remove
+        Есть ошибки...
+      #we_need_save
+        .callout.warning
+          %h6
+            = fa_icon 'info-circle'
+            Для анализа нам придётся сохранить ваш текст.
+          %h6
+            = fa_icon 'exclamation-circle'
+            Нажимая кнопку Продолжить, вы подтверждаете своё согласие на сохрание вашего текста.
+          %p
+            = link_to conversion_path(@conversion, conversion: { status: :bad }), method: :patch, class: 'button success' do
+              = fa_icon :save
+              Продолжить
+            = link_to '#', class: 'button alert hide-callout' do
+              = fa_icon :remove
+              Скрыть
   .medium-6.columns
     %h4
       Исходный текст
-    = params[:body]
-.row.actions
-  .meduim-12.columns
-    = link_to conversion_path(@conversion, conversion: { status: :good }), class: 'button success large' do
-      = fa_icon :check
-      Всё правильно!
-    = link_to conversion_path(@conversion, conversion: { status: :good }), class: 'button alert large' do
-      = fa_icon :remove
-      Есть ошибки...
+    %textarea
+      = params[:body]

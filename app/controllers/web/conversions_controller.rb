@@ -6,7 +6,6 @@ class Web::ConversionsController < ApplicationController
     body = params[:conversion][:body]
     params[:conversion][:converted_body] = insert params[:conversion][:body]
     params[:conversion][:size] = params[:conversion][:body].size
-    params[:conversion][:body] = nil
     if @conversion.submit params[:conversion]
       redirect_to conversion_path @conversion, body: body
     else
@@ -19,7 +18,11 @@ class Web::ConversionsController < ApplicationController
   end
 
   def update
-    @conversion = ConversionForm.find_with_model
+    @conversion = ConversionForm.find_with_model params[:id]
+    if @conversion.status.not_rated? && params[:conversion][:status] == 'good'
+      params[:conversion][:body] = nil
+      params[:conversion][:converted_body] = nil
+    end
     if @conversion.submit params[:conversion]
       redirect_to root_path, notice: t('notices.thanks_for_answer')
     else

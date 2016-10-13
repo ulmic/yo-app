@@ -2,9 +2,39 @@
  *= require_tree .
  *= require font-awesome
  *= require_self
-//= require foundation_and_overrides
-
+ *= require foundation_and_overrides
  */
+
+@font-face
+  font-family: 'mic-bold'
+  src: font-url('PFSquareSansPro-Medium.ttf')
+
+@font-face
+  font-family: 'mic-square-thin'
+  src: font-url('PFSquareSansPro-Thin.ttf')
+
+@font-face
+  font-family: 'mic-square-reg'
+  src: font-url('PFSquareSansPro-Regular.ttf')
+
+@font-face
+  font-family: 'mic-square-light-italic'
+  src: font-url('PFSquareSansPro-LightItalic.ttf')
+
+@font-face
+  font-family: 'mic'
+  src: font-url('PFBeauSansPro-Light.ttf')
+
+@font-face
+  font-family: 'mic-beau-sebold'
+  src: font-url('PFBeauSansPro-SeBold.ttf')
+
+@font-face
+  font-family: 'mic-beau-reg'
+  src: font-url('PFBeauSansPro-Reg.ttf')
+
+h1,h2,h3,h4,h5,h6 
+  font-family: 'mic-bold'
 
 body
   background-color: #2c3e50
@@ -15,15 +45,12 @@ body
   color: #eee
 
 .menu
-  text-align: center
-  width: 100%
-  z-index: 999
-  margin-bottom: 30px
-  .nav
-    a
-      box-sizing: border-box
-      &:hover
-        color: #eee
+  background-color: transparent
+  ul
+    background-color: transparent
+  a
+    &:hover
+      color: #eee
 
 .container
   text-align: center
@@ -40,3 +67,7 @@ input[type=submit]
 .actions
   float: left
   margin-top: 20px
+
+.top-bar
+  i.fa
+    margin-bottom: 17px
