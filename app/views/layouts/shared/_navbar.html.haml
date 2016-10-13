@@ -1,4 +1,10 @@
-.menu
-  .nav
-    = link_to root_path do
-      = fa_icon 'home 5x'
+.row
+  .top-bar.menu
+    .top-bar-left
+      %ul.menu
+        %li.menu-text
+          %h1.title
+            Ё-приложение
+        %li
+          %h3
+            = link_to fa_icon('home 2x'), root_path
