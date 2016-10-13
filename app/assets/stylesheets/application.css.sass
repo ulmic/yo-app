@@ -80,9 +80,19 @@ input[type=submit]
   .row
     display: table-cell
     vertical-align: middle
-    .large-6.columns
+    .columns
       display: table
       height: 100%
       .text, .image
         display: table-cell
         vertical-align: middle
+      .text
+        text-align: center
+        a
+          color: #333
+          img
+            height: 44px
+            margin-top: -7px
+          &:hover
+            opacity: 0.8
+            text-decoration: underline

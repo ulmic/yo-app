@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'reform'
 gem 'karamzin'
 gem 'enumerize'
+gem 'configus'
 
 group :development, :test do
   gem 'byebug'

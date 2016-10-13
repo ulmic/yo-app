@@ -10,12 +10,12 @@
   Мы не сохраняем по умолчанию ваши тексты
 
 = content_for :content do
-  .field{ style: 'background-color: #eee6c2; color: #333' }
+  .field.karamzin{ style: 'background-color: #eee6c2; color: #333' }
     .row
-      .large-6.columns
+      .large-5.columns
         .image
           = image_tag 'karamzin.jpg'
-      .large-6.columns.end{ style: 'margin-left: -20px' }
+      .large-7.columns{ style: 'margin-left: 0px' }
         .text
           %h1
             Николай Михайлович Карамзин
@@ -23,3 +23,8 @@
             историк, крупнейший русский литератор эпохи сентиментализма
           %h5
             уроженец Симбирской губернии, считается автором буквы Ё
+          %br
+          %h2
+            = link_to fa_icon('wikipedia-w'), configus.links.karamzin.wikipedia
+            = link_to configus.links.karamzin.karamzin250 do
+              = image_tag 'karamzin250_ico.png'
