@@ -16,7 +16,10 @@
         .callout.warning
           %h6
             = fa_icon 'info-circle'
-            Для анализа нам придётся сохранить ваш текст
+            Для анализа нам придётся сохранить ваш текст.
+          %h6
+            = fa_icon 'exclamation-circle'
+            Нажимая кнопку Продолжить, вы подтверждаете своё согласие на сохрание вашего текста.
           %p
             = link_to conversion_path(@conversion, conversion: { status: :bad }), method: :patch, class: 'button success' do
               = fa_icon :save
