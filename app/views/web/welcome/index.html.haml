@@ -46,17 +46,18 @@
         .text
           %h4
             Исходный текст
-          .input-group
-            %input.input-group-field#original{ type: :text, disabled: :disabled }
-            .input-group-button
-              %a.button.success
-                = fa_icon :magic
-          %h4
-            = fa_icon 'spin circle-o-notch'
+            = fa_icon 'spin circle-o-notch', class: :h4
+          %h3
+            .input-group
+              %input.input-group-field#original{ type: :text, disabled: :disabled }
+              .input-group-button
+                %a.button.success#magic
+                  = fa_icon :magic
           %h4
             Конвертированный текст
-          .input-group
-            %input.input-group-field{ type: :text, disabled: :disabled, value: 'В лесу родилась ёлочка' }
-            .input-group-button
-              %a.button.primary
-                = fa_icon 'thumbs-up'
+          %h3
+            .input-group
+              %input.input-group-field{ type: :text, disabled: :disabled, value: 'В лесу родилась ёлочка' }
+              .input-group-button
+                %a.button.primary
+                  = fa_icon 'thumbs-up'
