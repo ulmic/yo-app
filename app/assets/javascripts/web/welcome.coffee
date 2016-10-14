@@ -29,7 +29,18 @@ $ ->
     setTimeout ( ->
       $('.h4.fa-spin').hide()
     ), 5500
-
+    setTimeout ( ->
+      $('#converted').val('В лесу родилась ёлочка')
+    ), 5500
+    setTimeout ( ->
+      $('#like').addClass 'bounce'
+      $('#like').addClass 'animated'
+    ), 7500
+    setTimeout ( ->
+      $('#converted').val('')
+      $('#like').removeClass 'bounce'
+      $('#like').removeClass 'animated'
+    ), 10000
 
   process_demostrate_script()
-  setInterval process_demostrate_script, 6000
+  setInterval process_demostrate_script, 10000

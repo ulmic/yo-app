@@ -10,54 +10,5 @@
   Мы не сохраняем по умолчанию ваши тексты
 
 = content_for :content do
-  .field.karamzin#karamzin{ style: ' color: #333' }
-    .row
-      .large-5.columns
-        .image
-          = image_tag 'karamzin.jpg'
-      .large-7.columns
-        .text
-          %h1
-            Николай Михайлович Карамзин
-          %h5
-            историк, крупнейший русский литератор эпохи сентиментализма
-          %h5
-            уроженец Симбирской губернии, считается автором буквы Ё
-          %br
-          %h2
-            = link_to fa_icon('wikipedia-w'), configus.links.karamzin.wikipedia
-            = link_to configus.links.karamzin.karamzin250 do
-              = image_tag 'karamzin250_ico.png'
-    .arrow-down
-      = link_to '#', style: 'color: white', data: { href: '#karamzin' } do
-        = fa_icon 'arrow-circle-o-down 4x'
-  .field.yo-app
-    .row
-      .large-7.columns
-        .text
-          %h1
-            Сервис "Карамзин"
-          %h5
-            Вставит букву "Ё" в тексты там, где это нужно
-          %h5
-            = fa_icon 'exclamation-circle'
-            Мы не сохраняем ваши тексты по умолчанию
-      .large-5.columns
-        .text
-          %h4
-            Исходный текст
-            = fa_icon 'spin circle-o-notch', class: :h4
-          %h3
-            .input-group
-              %input.input-group-field#original{ type: :text, disabled: :disabled }
-              .input-group-button
-                %a.button.success#magic
-                  = fa_icon :magic
-          %h4
-            Конвертированный текст
-          %h3
-            .input-group
-              %input.input-group-field{ type: :text, disabled: :disabled, value: 'В лесу родилась ёлочка' }
-              .input-group-button
-                %a.button.primary
-                  = fa_icon 'thumbs-up'
+  = render 'karamzin'
+  = render 'action'

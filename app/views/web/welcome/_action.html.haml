@@ -1,0 +1,30 @@
+.field.yo-app
+  .row
+    .large-7.columns
+      .text
+        %h1
+          Сервис "Карамзин"
+        %h5
+          Вставит букву "Ё" в тексты там, где это нужно
+        %h5
+          = fa_icon 'exclamation-circle'
+          Мы не сохраняем ваши тексты по умолчанию
+    .large-5.columns
+      .text
+        %h4
+          Исходный текст
+          = fa_icon 'spin circle-o-notch', class: :h4
+        %h3
+          .input-group
+            %input.input-group-field#original{ type: :text, disabled: :disabled }
+            .input-group-button
+              %a.button.success#magic
+                = fa_icon :magic
+        %h4
+          Конвертированный текст
+        %h3
+          .input-group
+            %input.input-group-field#converted{ type: :text, disabled: :disabled }
+            .input-group-button
+              %a.button.primary#like
+                = fa_icon 'thumbs-up'
