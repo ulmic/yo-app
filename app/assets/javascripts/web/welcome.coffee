@@ -6,3 +6,41 @@ $ ->
   $submit_button.prop 'disabled', 'disabled'
   $('.new_conversion textarea').on 'input', ->
     $submit_button.prop 'disabled', $(this).val().length == 0
+
+
+  process_demostrate_script = ->
+    $('.h4.fa-spin').hide()
+    $original = $('#original')
+    $original.typed({
+      strings: [ 'В лесу родилась елочка' ],
+      typed: 0
+    })
+    setTimeout ( ->
+      $('#magic').addClass 'bounce'
+      $('#magic').addClass 'animated'
+    ), 1500
+    setTimeout ( ->
+      $('#magic').removeClass 'bounce'
+      $('#magic').removeClass 'animated'
+    ), 3000
+    setTimeout ( ->
+      $('.h4.fa-spin').show()
+    ), 2500
+    setTimeout ( ->
+      $('.h4.fa-spin').hide()
+    ), 5500
+    setTimeout ( ->
+      $('#converted').val('В лесу родилась ёлочка')
+    ), 5500
+    setTimeout ( ->
+      $('#like').addClass 'bounce'
+      $('#like').addClass 'animated'
+    ), 7500
+    setTimeout ( ->
+      $('#converted').val('')
+      $('#like').removeClass 'bounce'
+      $('#like').removeClass 'animated'
+    ), 10000
+
+  process_demostrate_script()
+  setInterval process_demostrate_script, 10000

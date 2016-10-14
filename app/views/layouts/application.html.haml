@@ -6,8 +6,11 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    = render 'layouts/shared/navbar'
-    .container
-      .row
-        .medium-12.columns
-          = yield
+    .header{ style: 'height: 100%; width: 100%' }
+      = render 'layouts/shared/navbar'
+      .container
+        .row
+          .medium-12.columns
+            = yield
+    .content
+      = yield :content

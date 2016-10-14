@@ -1,0 +1,21 @@
+.field.karamzin#karamzin{ style: ' color: #333' }
+  .row
+    .large-5.columns
+      .image
+        = image_tag 'karamzin.jpg'
+    .large-7.columns
+      .text
+        %h1
+          Николай Михайлович Карамзин
+        %h5
+          историк, крупнейший русский литератор эпохи сентиментализма
+        %h5
+          уроженец Симбирской губернии, считается автором буквы Ё
+        %br
+        %h2
+          = link_to fa_icon('wikipedia-w'), configus.links.karamzin.wikipedia
+          = link_to configus.links.karamzin.karamzin250 do
+            = image_tag 'karamzin250_ico.png'
+  .arrow-down{ style: 'top: 90%' }
+    = link_to '#', style: 'color: white', data: { href: '#karamzin' } do
+      = fa_icon 'arrow-circle-o-down 4x'
