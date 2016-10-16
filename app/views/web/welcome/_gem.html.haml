@@ -1,0 +1,21 @@
+.field.gem#gem{ style: ' color: #333' }
+  .row
+    .large-4.large-offset-1.columns
+      .image
+        = image_tag 'ruby.png'
+    .large-6.large-offset-1.columns
+      .text
+        %h1
+          Открытый исходный код
+        %h5
+          "Ё-приложение" - опенсорсный проект. Участвовать в разработке может любой желающий. Библиотека написана на языке Ruby.
+        %h5
+          При невозможности использовать наш API или библиотеку на Ruby, вы можете "переписать" алгоритм на нужный вам язык. Подробности по ссылке.
+        %br
+        %h2
+          = link_to configus.links.karamzin.github, class: 'button secondary' do
+            = fa_icon 'github'
+            Karamzin
+  .arrow-down{ style: 'top: 390%' }
+    = link_to '#', style: 'color: white', data: { href: '#gem' } do
+      = fa_icon 'arrow-circle-o-down 4x'
