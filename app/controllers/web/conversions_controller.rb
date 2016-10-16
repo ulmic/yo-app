@@ -7,6 +7,7 @@ class Web::ConversionsController < ApplicationController
     params[:conversion][:converted_body] = insert body
     params[:conversion][:size] = params[:conversion][:body].size
     if @conversion.submit params[:conversion]
+      increase_request_counter :web
       redirect_to conversion_path @conversion, body: @conversion.body
     else
       redirect_to root_path notice: :error
