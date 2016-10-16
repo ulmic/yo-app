@@ -26,3 +26,7 @@ $ ->
       $('html body').animate {
         scrollTop: $($(this).data('href')).offset().top
       }, 1000
+  init_blank_adding = ->
+    $('.blank').prop('target', '_blank')
+
+  init_blank_adding()
