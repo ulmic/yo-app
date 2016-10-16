@@ -17,6 +17,7 @@ gem 'reform'
 gem 'karamzin'
 gem 'enumerize'
 gem 'configus'
+gem 'telegram-bot-ruby'
 
 group :development, :test do
   gem 'byebug'
