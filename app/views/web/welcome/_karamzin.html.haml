@@ -13,8 +13,8 @@
           уроженец Симбирской губернии, считается автором буквы Ё
         %br
         %h2
-          = link_to fa_icon('wikipedia-w'), configus.links.karamzin.wikipedia
-          = link_to configus.links.karamzin.karamzin250 do
+          = link_to fa_icon('wikipedia-w'), configus.links.karamzin.wikipedia, class: :blank
+          = link_to configus.links.karamzin.karamzin250, class: :blank do
             = image_tag 'karamzin250_ico.png'
   .arrow-down{ style: 'top: 90%' }
     = link_to '#', style: 'color: white', data: { href: '#karamzin' } do

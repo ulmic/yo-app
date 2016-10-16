@@ -19,10 +19,14 @@ $ ->
   $('#to_clipboard').click ->
     window.prompt $(this).data('clipboard-text')
 
-  buttons = ['.arrow-down a', 'a.try-it']
+  buttons = ['.arrow-down a', 'a.try-it', 'a.nav-scroll']
   $(buttons).each ->
     $("#{this}").click (e) ->
       e.preventDefault()
       $('html body').animate {
         scrollTop: $($(this).data('href')).offset().top
       }, 1000
+  init_blank_adding = ->
+    $('.blank').prop('target', '_blank')
+
+  init_blank_adding()
