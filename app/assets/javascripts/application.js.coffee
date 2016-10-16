@@ -19,7 +19,7 @@ $ ->
   $('#to_clipboard').click ->
     window.prompt $(this).data('clipboard-text')
 
-  buttons = ['.arrow-down a', 'a.try-it']
+  buttons = ['.arrow-down a', 'a.try-it', 'a.nav-scroll']
   $(buttons).each ->
     $("#{this}").click (e) ->
       e.preventDefault()
