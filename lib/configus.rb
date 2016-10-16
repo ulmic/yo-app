@@ -7,6 +7,7 @@ Configus.build Rails.env do
         github 'https://github.com/ulmic/karamzin'
         api 'https://ulmic.ru/articles/79'
         rubygems 'https://rubygems.org/gems/karamzin'
+        telegram_bot 'https://telegram.me/karamzin'
       end
     end
   end
