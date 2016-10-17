@@ -13,7 +13,9 @@ Telegram::Bot::Client.run(token) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}")
     else
       text = insert message.text
-      increase_request_counter :telegram
+      if ActiveRecord::Base.connection.table_exists? 'request_records'
+        increase_request_counter :telegram
+      end
       bot.api.send_message(chat_id: message.chat.id, text: text)
     end
   end
