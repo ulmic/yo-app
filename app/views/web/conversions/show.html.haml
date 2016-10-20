@@ -1,11 +1,11 @@
 .row.result
-  .medium-6.columns
-    .row
+  .small-12.medium-12.large-6.columns
+    .row-fluid
       %h4
         Конвертированный текст
       %textarea
         = @conversion.converted_body
-    .row.actions
+    .row-fluid.actions
       = link_to conversion_path(@conversion, conversion: { status: :good }), method: :patch, class: 'button success large' do
         = fa_icon :check
         Всё правильно!
@@ -27,7 +27,7 @@
             = link_to '#', class: 'button alert hide-callout' do
               = fa_icon :remove
               Скрыть
-  .medium-6.columns
+  .small-12.medium-12.large-6.columns
     %h4
       Исходный текст
     %textarea
