@@ -182,9 +182,8 @@ footer
     background-size: cover
     background-attachment: fixed
     background-position: center center
-    .header
+    .header, .field
       height: 50%
-      background: none
   .header
     h1
       font-size: 50pt
@@ -196,13 +195,56 @@ footer
     #new_conversion
       input[type=submit]
         font-size: 25pt
-    label, h3
+    .label, h3
       font-size: 25pt
   .content
     .field
-      &.karamzin, &.action, &.gem, &.on_your_site, &.telegram_bot
+      padding-top: 20%
+      &.karamzin
         background: transparent
+        .image
+          display: none
+        .text
+          color: white !important
+          h2
+            i.fa.fa-wikipedia-w
+              font-size: 120px
+              border-bottom: 5px dashed white
+              color: white
+          a
+            text-shadow: none
+            font-size: 50pt
+            img
+              height: 120px
+              margin-top: -42px
+              border-bottom: 5px dashed white
+          h5
+            font-size: 28pt
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+      &#action, &.gem, &.on_your_site, &.telegram_bot
+        background: white
+        .text
+          color: black !important
+          h2
+            i.fa.fa-wikipedia-w
+              font-size: 120px
+              border-bottom: 5px dashed white
+              color: black
+          a
+            text-shadow: none
+            font-size: 50pt
+            img
+              height: 120px
+              margin-top: -42px
+              border-bottom: 5px dashed white
+          h5
+            font-size: 28pt
     .row
       float: left
     h1
       font-size: 50pt
+      &.telegram-icon
+        font-size: 150pt
+        text-shadow: none
+    .arrow-down
+      display: none
