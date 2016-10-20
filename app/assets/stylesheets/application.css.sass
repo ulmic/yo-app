@@ -192,6 +192,7 @@ footer
     .header, .field
       height: 50%
   .header
+    background: none
     h1
       font-size: 50pt
     .container
@@ -228,8 +229,9 @@ footer
           h5
             font-size: 28pt
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
-      &.gem, &.on_your_site, &.telegram_bot
+      &.telegram_bot
         background: white
+      &.gem, &.on_your_site, &.telegram_bot
         .text
           color: black !important
           h2
@@ -247,6 +249,8 @@ footer
           h5
             font-size: 28pt
       &#action
+        padding-top: 15%
+        padding-bottom: 13%
         .row
           .columns
             .form
@@ -259,9 +263,27 @@ footer
               .input-group-button
                 a
                   font-size: 37px
-        padding-top: 15%
+            .text
+              margin-top: 5%
+              text-align: center
+              display: block
+              h1
+                font-size: 57pt
+              h5
+                font-size: 30pt
+              a
+                font-size: 50pt
       &.telegram_bot
         padding-bottom: 15%
+      &.on_your_site
+        padding-bottom: 13%
+        .text
+          color: #e2dcbc !important
+        h5
+          font-size: 38pt !important
+          a
+            font-size: 38pt !important
+            text-decoration: underline
     .row
       float: left
     h1
@@ -271,3 +293,13 @@ footer
         text-shadow: none
     .arrow-down
       display: none
+  footer
+    height: auto
+    img
+      height: auto
+      width: 100%
+      margin-bottom: 5%
+    h6
+      font-size: 34pt
+      a
+        text-decoration: underline
