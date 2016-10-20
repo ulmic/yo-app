@@ -6,11 +6,15 @@
 
 $ ->
   $(document).foundation()
-  $('textarea').each ->
-    $(this).on 'focus', ->
-      $(this).animate height: 300
-    $(this).on 'focusout', ->
-      $(this).animate height: 100
+
+  MOBILE_WIDTH = 1000
+
+  if $('body').width() > MOBILE_WIDTH
+    $('textarea').each ->
+      $(this).on 'focus', ->
+        $(this).animate height: 300
+      $(this).on 'focusout', ->
+        $(this).animate height: 100
   $conversion_body = $('#conversion_body')
   if $conversion_body.length > 0
     $('#conversion_body_count').html "Символов: #{$conversion_body.val().length}"
