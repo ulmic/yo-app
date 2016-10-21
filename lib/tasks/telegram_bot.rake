@@ -9,6 +9,9 @@ namespace :yo_app do
 
       Telegram::Bot::Client.run(token) do |bot|
         bot.listen do |message|
+          if TelegramUser.where(uid: message.from.id).first.nil?
+            TelegramUser.create uid: message.from.id, first_name: message.from.first_name
+          end
           case message.text
           when '/start'
             bot.api.send_message(chat_id: message.chat.id, text: "Привет, #{message.from.first_name}. Я - Карамзин. Я не великий историк и литератор, я - программа. Я могу расставить в твоём тексте буквы Ё в тех словах, где это нужно. Просто отправь свой текст.")
