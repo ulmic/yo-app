@@ -14,7 +14,7 @@ gem 'font-awesome-rails'
 gem 'foundation-rails', '~> 6' 
 gem 'simple_form'
 gem 'reform'
-gem 'karamzin'
+gem 'karamzin', '>= 1.0.4'
 gem 'enumerize'
 gem 'configus'
 gem 'telegram-bot-ruby'
@@ -38,4 +38,9 @@ group :test do
   gem 'tconsole', github: 'ulmic/tconsole', branch: 'rails4'
   gem 'coveralls', require: false
   gem 'webmock'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'unicorn'
 end

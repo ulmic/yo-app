@@ -5,8 +5,9 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = render 'layouts/shared/google_analytics'
   %body
-    .header{ style: 'height: 100%; width: 100%' }
+    .header
       = render 'layouts/shared/navbar'
       .container
         .row
